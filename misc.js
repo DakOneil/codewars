@@ -73,3 +73,59 @@ function repeats(arr){
       }
       return singles.reduce((acc,c)=>acc+c)
     };
+
+
+
+
+// Give me a Diamond
+
+// Jamie is a programmer, and James' girlfriend. She likes diamonds, and wants a diamond string from James. Since James doesn't know how to make this happen, he needs your help.
+
+// Task
+// You need to return a string that looks like a diamond shape when printed on the screen, using asterisk (*) characters. Trailing spaces should be removed, and every line must be terminated with a newline character (\n).
+
+// Return null/nil/None/... if the input is an even number or negative, as it is not possible to print a diamond of even or negative size.
+
+// Examples
+// A size 3 diamond:
+
+//  *
+// ***
+//  *
+// ...which would appear as a string of " *\n***\n *\n"
+
+// A size 5 diamond:
+
+//   *
+//  ***
+// *****
+//  ***
+//   *
+// ...that is:
+
+// "  *\n ***\n*****\n ***\n  *\n"
+
+function diamond(n){
+    if (n%2==0 || n < 1) return null
+    let count = n
+    let spaceCount = 0
+    let maxW = '*'.repeat(n)
+    let diam = [maxW]
+    while (diam.length < n) {
+      count -= 2
+      spaceCount++
+      let narrower = '*'.repeat(count)
+      while (narrower.length < count+1) {
+        narrower = ' '.repeat(spaceCount) + narrower
+      }
+      diam.push(narrower);
+      diam.unshift(narrower)
+    }
+    return diam.join('\n') + '\n';
+  }
+  
+  //Params - n is a number that is the max width of the diamond
+  //Returns - return a string that will make a diamond shape of '*' from 1 to n width
+  //Examples - n=1 returns '*\n', n=5 returns '   *\n ***\n*****\n ***\n  *\n'
+  //Pseudo - first i tried to make it as a string but this time i'm gonna try to make it as
+  //        an array and then return array.join('\n')
