@@ -162,3 +162,22 @@ function foldTo(distance) {
   run a while loop that will double the thickness every loop and increase the foldCount by one
       until the thickness is >= distance
   */
+
+
+
+
+// In class problem from 7-9-21
+
+// Given two arrays of strings, return the number of times each string of the second array appears in the first array.
+
+// Example
+// array1 = ['abc', 'abc', 'xyz', 'cde', 'uvw']
+// array2 = ['abc', 'cde', 'uap']
+
+// Test.assertDeepEquals(solve(['abc', 'abc','xyz','abcd','cde'], ['abc', 'cde', 'uap']), [2, 1, 0]);
+// Test.assertDeepEquals(solve(['abc', 'xyz','abc', 'xyz','cde'], ['abc', 'cde', 'xyz']), [2, 1, 2]);
+// Test.assertDeepEquals(solve(['quick', 'brown', 'fox', 'is', 'quick'], ['quick', 'abc', 'fox']), [2, 0, 1]);
+
+function howManyTimes(arr1, arr2) {
+  return arr2.map(x=> arr1.filter(y=>y==x).length)
+}
