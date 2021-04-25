@@ -194,3 +194,22 @@ function howManyTimes(arr1, arr2) {
 // --> "alpha beta gamma delta alpha beta gamma delta"
 
 const removeConsecutiveDuplicates = s => s.split(' ').filter((el,i,arr)=> el != arr[i+1]).join(' ')
+
+
+
+
+
+// Alternate case
+
+// Write function alternateCase which switch every letter in string from upper to lower and from lower to upper. E.g: Hello World -> hELLO wORLD
+
+function alternateCase(s) {
+  return s.split('').map((el)=> {
+    if (el == el.toUpperCase()) return el.toLowerCase()
+    else if (el == el.toLowerCase()) return el.toUpperCase()
+  }).join('')
+}
+
+
+
+
