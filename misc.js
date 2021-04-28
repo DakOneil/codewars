@@ -957,3 +957,23 @@ function solve(a,b){
    let strB = b.split('').filter(el=>!a.includes(el)).join("")
    return strA + strB
  };
+
+
+
+
+
+//  Counting Array Elements
+
+//  Write a function that takes an array and counts the number of each unique element present.
+
+// count(['james', 'james', 'john']) 
+// #=> { 'james': 2, 'john': 1}
+
+function count(array){
+  //your code here
+  let obj = {}
+  array.forEach(el=> {
+    obj[el] = array.filter(x=>x==el).length
+  })
+  return obj
+}
