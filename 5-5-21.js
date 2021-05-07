@@ -62,3 +62,9 @@ class Animal {
       return `${this.name} is a ${this.type}`;
     }
   }
+
+
+
+
+
+  
