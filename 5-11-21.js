@@ -26,4 +26,50 @@ function roundIt(n){
 
 
 
+//   Training JS #29: methods of arrayObject---concat() and join()
 
+//   Task
+//   Coding in function bigToSmall. function accept 1 parameter arr(2D number array).
+  
+//   Your task is: First to all, refer to the example above, flat output arr to a one-dimensional array.
+  
+//   And then sort array in descending order.
+  
+//   Finally, use the separator ">" to connect the elements into a string.
+  
+//   Don't complain about the situation like 1>1 is not reasonable, it is just a separator.
+  
+//   Some example:
+  
+//   bigToSmall([[1,2],[3,4],[5,6]]) should return "6>5>4>3>2>1"
+//   bigToSmall([[1,3,5],[2,4,6]]) should return "6>5>4>3>2>1"
+//   bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"
+
+function bigToSmall(arr){
+    //coding here...
+    let a = []
+    for (let i = 0 ; i < arr.length ; i++) {
+      a = a.concat(arr[i])
+    }
+    a = a.sort((b,c)=>c-b)
+    return a.join('>')
+  }
+
+
+
+
+//   Take an Arrow to the knee, Functionally
+
+//   Arrow style Functions
+// Come here to practice the Arrow style functions Not much else to say good luck!
+// Details
+// You will be given an array of numbers which can be used using the String.fromCharCode() (JS), Tools.FromCharCode() (C#) method to convert the number to a character. It is recommended to map over the array of numbers and convert each number to the corresponding ascii character.
+
+// Examples
+// These are example of how to convert a number to an ascii Character:
+// Javascript => String.fromCharCode(97) // a
+// C# => Tools.FromCharCode(97) // a
+
+  var ArrowFunc = function(arr) {
+    return arr.map( x => String.fromCharCode(x)).join(''); //Complete this function
+  }
