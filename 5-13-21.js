@@ -52,3 +52,45 @@ function arr2bin(arr){
   return filt.reduce((acc,c)=>acc+c,0).toString(2)
 }
 
+
+
+
+
+// Potenciation
+
+// The function takes in 2 inputs x and y, and should return x to the power of y
+
+// Simple, right? But you're NOT allowed to use Math.pow();
+
+// Obs: x and y will be naturals, so DON'T take fractions into consideration;
+
+// Note : zero to the power of zero equals one in this kata
+
+// Great coding <3
+
+function power(x,y){
+  //SHOW ME WHAT YOU GOT!
+  let num = 1
+  if (x==1) return 1
+  for (let i = 0 ; i < y ; i++) {
+    num *= x
+  }
+  return num
+}
+
+
+
+
+// Points of Reflection
+
+// Task
+// Given two points P and Q, output the symmetric point of point P about Q. Each argument is a two-element array of integers representing the point's X and Y coordinates. Output should be in the same format, giving the X and Y coordinates of point P1. You do not have to validate the input.
+
+function symmetricPoint(p, q) {
+  let a = p[0] - q[0]
+  let b = p[1] - q[1]
+  return [q[0]-a, q[1]-b]
+}
+
+
+
