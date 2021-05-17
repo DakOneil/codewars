@@ -19,3 +19,72 @@ var rooms = {
       }
     }
   }
+
+
+
+
+
+//   Training JS #21: Methods of String object--trim() and the string template
+
+//   Task
+// Coding in function fiveLine, function accept 1 parameter:s. s is a string.
+
+// Please return a string of 5 lines(newline symbol is \n). The first line has one s; Second line have two s; and so on..Fifth line have five s;
+
+// Note1: The two sides of the parameter s may contain some whitespace, please clear them before using s.
+
+// Note2: Using a string template can make your job easier.
+
+  function fiveLine(s){
+    //coding here...
+    s = s.trim()
+    return `${s}\n${s}${s}\n${s.repeat(3)}\n${s.repeat(4)}\n${s.repeat(5)}`
+  }
+
+
+
+
+//   Geometry Basics: Circle Area in 2D
+
+// This series of katas will introduce you to basics of doing geometry with computers.
+
+// Write the function circleArea/CircleArea which takes in a Circle object and calculates the area of that circle.
+
+function circleArea(circle){
+    // your code here
+    return Math.PI * circle.radius**2
+  }
+
+
+
+
+//   Fun with ES6 Classes #1 - People, people, people
+
+//   Time for some OOP fun!
+
+// Define a class Person with the following properties:
+
+// A constructor that accepts 4 arguments: firstName/FirstName (defaults to "John" if not set), lastName/LastName (defaults to "Doe" if not set), age/Age (defaults to 0 if not set) and gender/Gender (defaults to "Male" if not set). These should be stored in this.firstName/this.FirstName, this.lastName/this.LastName, this.age/this.Age and this.gender/this.Gender respectively.
+// A method sayFullName/SayFullName that accepts no arguments and returns the full name (e.g. "John Doe")
+// A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
+// You may use any valid syntax you like; however, it is highly recommended that you complete this Kata using ES6 syntax and features.
+
+// Have fun! :D
+
+  class Person {
+    // Get coding in ES6 :D
+    constructor(firstName = 'John', lastName = 'Doe', age = 0, gender = 'Male') {
+      this.firstName = firstName, 
+      this.lastName = lastName, 
+      this.age = age, 
+      this.gender = gender
+    }
+    sayFullName() {
+      return `${this.firstName} ${this.lastName}`
+    }
+    static greetExtraTerrestrials(raceName) {
+      return `Welcome to Planet Earth ${raceName}`
+    }
+  }
+
+  
