@@ -108,3 +108,29 @@ Counter.prototype.getValue = function() {
 Counter.prototype.reset = function() {
   this.value = 0;
 };
+
+
+
+
+Draw stairs
+
+Given a number n, draw stairs using the letter "I", n tall and n wide, with the tallest in the top left.
+
+For example n = 3 result in:
+
+"I\n I\n  I"
+or printed:
+
+I
+ I
+  I
+
+  function drawStairs(n) {
+    // your code here
+    let arr = []
+    for (let i = 0 ; i < n ; i++) {
+      let space = ' '.repeat(i)
+      arr.push(space + 'I')
+    }
+    return arr.join('\n')
+  }
