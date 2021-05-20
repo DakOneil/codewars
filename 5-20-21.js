@@ -46,3 +46,15 @@ function elevator(left, right, call){
   return leftDis < rightDis ? 'left' : 'right'
 }
 
+
+
+
+// Return to Sanity
+
+// This function should return an object, but it's not doing what's intended. What's wrong?
+
+function mystery() {
+  var results =
+    {sanity: 'Hello'};
+  return results;
+}
