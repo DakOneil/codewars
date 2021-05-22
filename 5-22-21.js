@@ -25,4 +25,10 @@ function blackAndWhite(arr){
 
 
 
-  
+//   Be Concise III - Sum Squares
+
+//   You are given a program sumSquares that takes an array as input and returns the sum of the squares of each item in an array. 
+
+  function sumSquares(array) {
+    return array.map(x=>{return x**2}).reduce((acc,c)=>acc+c)
+  }
