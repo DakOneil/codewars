@@ -74,3 +74,18 @@ function smallEnough(a, limit){
 // R: return a boolean
 // E: 
 // P: loop through a, check if each value is <= limit, return boolean
+
+
+
+// Factorial
+
+// Your task is to write function factorial.
+
+function factorial(n){
+  //your code here
+  let fac = 1
+  for (let i = 1 ; i <= n ; i++) {
+    fac *= i
+  }
+  return fac == 0 ? 1 : fac
+}
