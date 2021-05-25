@@ -53,3 +53,24 @@ function generateLink(user) {
     let userLink = encodeURIComponent(user)
     return `${homeLink}${userLink}`
   }
+
+
+
+
+//   Small enough? - Beginner
+
+//   You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+// You can assume all values in the array are numbers.
+
+function smallEnough(a, limit){
+  if (a.map(x=> {
+    return x<=limit
+  }).includes(false)) return false
+  else return true
+}
+
+// P: a and limit
+// R: return a boolean
+// E: 
+// P: loop through a, check if each value is <= limit, return boolean
