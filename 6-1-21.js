@@ -17,40 +17,66 @@
 // aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
 
 function aliasGen(){
-    // Code Heree
-  let guide = {
-    'A': 'Alpha', 
-    'B': 'Beta',
-    'C': 'Cache', 
-    'D': "Data",
-    'E': "Evil",
-    'F': 'Function',
-    'G': 'Git',
-    'H': 'Half-life',
-    'I': 'Indigo',
-    'J': 'Jabber',
-    'K': 'Killer',
-    'L': 'Loser',
-    'M': 'Malware',
-    'N': 'Node',
-    'O': 'Optimus',
-    'P': 'Payload',
-    'Q': 'Quantum',
-    'R': 'Rodeo',
-    'S': 'Spy',
-    'T': 'T-Rex',
-    'U': 'Upsilon',
-    'V': 'Five',
-    'W': 'Worm',
-    'X': 'Xylophone',
-    'Y': 'Y',
-    'Z': 'Zero'
-  }
-  let first = guide[arguments[0][0].toUpperCase()];
-  let last = guide[arguments[1][0].toUpperCase()];
-  if (first == last) { last = arguments[0]}
-  if (!first || !last) return 'Your name must start with a letter from A - Z.'
-  else return `${first} ${last}`
+  // Code Heree
+let firstGuide = {
+  'A': 'Alpha', 
+  'B': 'Beta',
+  'C': 'Cache', 
+  'D': "Data",
+  'E': "Energy",
+  'F': 'Function',
+  'G': 'Glitch',
+  'H': 'Half-life',
+  'I': 'Ice',
+  'J': 'Java',
+  'K': 'Keystroke',
+  'L': 'Logic',
+  'M': 'Malware',
+  'N': 'Nagware',
+  'O': 'OS',
+  'P': 'Phishing',
+  'Q': 'Quantum',
+  'R': 'RAD',
+  'S': 'Strike',
+  'T': 'Trojan',
+  'U': 'Ultraviolet',
+  'V': 'Vanilla',
+  'W': 'WiFi',
+  'X': 'Xerox',
+  'Y': 'Y',
+  'Z': 'Zero'
 }
-
-// ^^Need to make changes to have a first name guide and a last name guide
+let lastGuide = {
+  'A': 'Analogue',
+  'B': 'Bomb',
+  'C': 'Catalyst', 
+  'D': "Discharge",
+  'E': "Electron",
+  'F': 'Faraday',
+  'G': 'Gig',
+  'H': 'Hacker',
+  'I': 'IP',
+  'J': 'Jabber',
+  'K': 'Killer',
+  'L': 'Lazer',
+  'M': 'Mike',
+  'N': 'n00b',
+  'O': 'Overclock',
+  'P': 'Payload',
+  'Q': 'Quark',
+  'R': 'Roy',
+  'S': 'Spy',
+  'T': 'T-Rex',
+  'U': 'Unit',
+  'V': 'Virus',
+  'W': 'Worm',
+  'X': 'X',
+  'Y': 'Yob',
+  'Z': 'Zombie'
+}
+let first = firstGuide[arguments[0][0].toUpperCase()];
+let last = lastGuide[arguments[1][0].toUpperCase()];
+if (first == last) { last = arguments[0]}
+if (!first || !last) return 'Your name must start with a letter from A - Z.'
+else return `${first} ${last}`
+}
