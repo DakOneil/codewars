@@ -60,3 +60,20 @@ function swapValues(a) {
 // add the value "codewars" to the already defined websites array
 
 websites.push('codewars')
+
+
+
+// Classic Hello World
+
+// You are given a method called main, make it print the line Hello World! and don't return anything
+
+// Note that for some languages, the function main is the entry point of the program.
+
+// Here's how it will be tested:
+
+// Print "Hello World!" to the screen
+class Solution{
+  static main()  {
+    console.log('Hello World!')
+    }
+}
