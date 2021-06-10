@@ -141,3 +141,46 @@ function queueTime(customers, n) {
     }
   }
 }
+
+
+
+
+// Encrypt this!
+
+// Acknowledgments:
+// I thank yvonne-liu for the idea and for the example tests :)
+
+// Description:
+// Encrypt this!
+
+// You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+
+// Your message is a string containing space separated words.
+// You need to encrypt each word in the message using the following rules:
+// The first letter needs to be converted to its ASCII code.
+// The second letter needs to be switched with the last letter
+// Keepin' it simple: There are no special characters in input.
+// Examples:
+// encryptThis("Hello") === "72olle"
+// encryptThis("good") === "103doo"
+// encryptThis("hello world") === "104olle 119drlo"
+
+var encryptThis = function(text) {
+  // Implement me! :)
+  let arr = text.split(' ')
+    for (let i = 0 ; i < arr.length ; i++) {
+      let first = arr[i].charCodeAt(0).toString()
+      let second = arr[i][arr[i].length-1]
+      let middle = arr[i].slice(2,arr[i].length-1)
+      let last = arr[i][1]
+      if (arr[i].length == 1) {
+        arr[i] = first
+      } else if (arr[i].length == 2) {
+        arr[i] = first + last
+      }
+      else {
+        arr[i] = first + second + middle + last
+      }
+    }
+    return arr.join(' ')
+  }
