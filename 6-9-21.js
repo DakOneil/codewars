@@ -102,3 +102,42 @@ function all( arr, fun ){
   // ...
   return arr.filter(n=>fun(n)).length == arr.length
 }
+
+
+
+
+// The Supermarket Queue
+
+// There is a queue for the self-checkout tills at the supermarket. Your task is write a function to calculate the total time required for all the customers to check out!
+
+// input
+// customers: an array of positive integers representing the queue. Each integer represents a customer, and its value is the amount of time they require to check out.
+// n: a positive integer, the number of checkout tills.
+// output
+// The function should return an integer, the total time required.
+
+// Important
+// Please look at the examples and clarifications below, to ensure you understand the task correctly :)
+
+function queueTime(customers, n) {
+  if (customers.length == 0) return 0
+  if (n==1) return customers.reduce((acc,c)=>acc+c,0)
+  else {
+    let tills = []
+    for (let i = 0 ; i < customers.length ; i++) {
+      while (tills.length < n) {
+        if (customers[0]) {
+          tills.push(customers[0])
+          customers.shift()
+        } else break
+      }
+      for (let i = 0 ; i < customers.length ; i++) {
+        tills.sort((a,b)=>a-b)
+        tills[0] += customers[0]
+        customers.shift()
+        i--
+      }
+      return tills.sort((a,b)=>b-a)[0]
+    }
+  }
+}
