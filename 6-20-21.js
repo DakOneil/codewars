@@ -170,3 +170,24 @@ function isolateIt(arr){
       }
     })
   }
+
+
+
+
+//   Training JS #27: methods of arrayObject---filter()
+
+//   Task
+// Coding in function countGrade. function accept 1 parameters scores, it's a number array. Your task is to count the grade distribution of the scores, to return an object like this:
+
+function countGrade(scores){
+    //coding here...
+    let gradeBook = {
+      S: scores.filter(v=>{return v>=100}).length,
+      A: scores.filter(v=>{return v<100 && v>=90}).length,
+      B: scores.filter(v=>{return v<90 && v>=80}).length,
+      C: scores.filter(v=>{return v<80 && v>=60}).length,
+      D: scores.filter(v=>{return v<60 && v>=0}).length,
+      X: scores.filter(v=>{return v==-1}).length,
+    }
+    return gradeBook
+  }
