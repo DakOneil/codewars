@@ -140,3 +140,33 @@ function countWords(str) {
     // ...
     return !str ? 0 : str.match(/\S+/g) == null ? 0 : str.match(/\S+/g).length
   }
+
+
+
+
+
+//   Training JS #26: methods of arrayObject---map()
+
+//   Task
+// Coding in function isolateIt. function accept 1 parameters arr, it's a string array. Your task is to put a character "|" into the middle of each element.
+
+// If the string length is an even number, use the insert method. for example: "abcd" should became "ab|cd". "|" should be inserted between ab and cd.
+
+// If the string length is an odd number, use the replacement method. for example: "abcde" should became "ab|de". Character c will be replaced by |.
+
+// The original array should not be changed, you need to return a new array(if you use the map method, you do not need to worry about this).
+
+function isolateIt(arr){
+    //coding here...
+    return arr.map(s=> {
+      let l = s.length
+      let i
+      if (l%2==0) {
+        i = l/2
+        return s = s.slice(0,i) + '|' + s.slice(i, l)
+      } else {
+        i = Math.floor(l/2)
+        return s = s.slice(0,i) + '|' + s.slice(i+1, l)
+      }
+    })
+  }
