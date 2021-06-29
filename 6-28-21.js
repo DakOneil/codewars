@@ -16,3 +16,19 @@ function validate(username, password){
     var database = new Database();
     return password.includes('||' || '//') ?  "Wrong username or password!" : database.login(username, password);
   }
+
+
+
+
+//   Find variable which breaks strict comparison!
+
+//   In JavaScript, there is a special case where strict comparison of the same variable returns false! Try to find out what must be done to get such result!
+
+// var x = something;
+// x === x // returns false!
+
+function findStrangeValue() {
+  // your code!
+  let x = NaN
+  return x
+}
