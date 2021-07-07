@@ -38,3 +38,34 @@ function multiplicationTable(row,col){
   // push to the inner array the col num * the row num
   // outside the inner loop, then push the whole inner array to the return array
   // outside the outer loop, return the return array
+
+
+
+
+
+//   Ordered Count of Characters
+
+//   Count the number of occurrences of each character and return it as a list of tuples in order of appearance. For empty output return an empty list.
+
+// Example:
+
+// orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
+
+var orderedCount = function (text) {
+    // Implement me!
+    let charCountArray = []
+    let countedChars = ''
+    for (let i = 0 ; i < text.length ; i++) {
+      let count = 0
+      if (!countedChars.includes(text[i])) {
+        for (let j = 0 ; j < text.length ; j++) {
+          if (text[j] == text[i]) count++
+        }
+      charCountArray.push([text[i], count])
+      }
+    countedChars += text[i]
+    }
+    return charCountArray
+  }
+  
+ 
