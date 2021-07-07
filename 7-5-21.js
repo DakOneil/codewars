@@ -99,7 +99,7 @@ function nextItem(xs, item) {
 
 
 
-Where my anagrams at?
+// Where my anagrams at?
 function anagrams(word, words) {
     /* create a function that takes in a word and counts out all of its letters
     run that function on the word argument and then filter out words based on running
