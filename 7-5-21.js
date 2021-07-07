@@ -84,6 +84,42 @@ function sqInRect(lng, wdth){
 function nextItem(xs, item) {
     // TODO: Implement me
     /*
-    
+    get an array of strings or numbers, or a string ; and a value
+    find the value and return the next value
+    if their is no value present or no next value return undefined
     */
+   // make sure that it isn't undefined
+        // ternary to return undefined if no value present or its the last value or ...the following
+    // find the value and assign its index to a variable
+    // add one to the index var
+    // return the value at the index
+    let ind = xs.indexOf(item)
+    return ind < 0 || ind == xs.length - 1 ? undefined : xs[ind+1]
 }
+
+
+
+Where my anagrams at?
+function anagrams(word, words) {
+    /* create a function that takes in a word and counts out all of its letters
+    run that function on the word argument and then filter out words based on running
+    it on each element and making sure that it equals word*/
+    //function takes in a param
+    //function makes an object with a letter count 
+    //words.forEach(el=>function(el)==object)
+    function letterCount(a) {
+      let aObj = {}
+      let aLetters = a.split('')
+      aLetters.forEach(el=>{
+        if (!aObj.includes(el)) {
+          aObj[el] = 1
+        } else {
+          aObj[el]++
+        }
+      })
+      return aObj
+    }
+    return words.filter(el=>{
+      letterCount(el) == letterCount(word)
+    })
+  }
