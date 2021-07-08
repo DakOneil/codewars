@@ -12,7 +12,7 @@ function squareSum(numbers){
     }
     return sum
   }
-  
+
   //solution 2
   function squareSum(numbers){
     return numbers.reduce((acc,c)=> acc + c**2, 0)
