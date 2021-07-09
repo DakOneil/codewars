@@ -99,6 +99,7 @@ function reduceStringsAndNums(arr) {
 }
 //Optimized
 const reduceAllNums = arr => arr.map(el=>Number(el)).reduce((acc,c)=>acc+c)
+const reduceWithoutMapping = arr => arr.reduce((acc,c)=>+acc + +c)
 
 console.log(reduceStringsAndNums([23,5,234,625,21]))
 console.log(reduceAllNums([23,5,234,625,21]))
