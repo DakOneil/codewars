@@ -1,3 +1,4 @@
+// July 7, 2021
 // Square(n) Sum
 
 // Complete the square sum function so that it squares each number passed into it and then sums the results together.
@@ -21,7 +22,7 @@ function squareSum(numbers){
 
 
 
-
+// July 8, 2021
 // Array combinations
 
 // In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray.
@@ -74,3 +75,35 @@ function solve(arr) {
   As it turns out the number of unique arrays is really simple to calculate.
   It is just the lengths of the inner arrays multiplied together.
   */
+
+
+
+// July 9, 2021
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+// assert.strictEqual(sumMix([9, 3, '7', '3']), 22);
+// assert.strictEqual(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
+// assert.strictEqual(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41); 
+
+//Brute
+function reduceStringsAndNums(arr) {
+  let allNums = arr.map((el)=> {
+    return Number(el)
+  })
+  let sum = allNums.reduce((acc,c)=> {
+    return acc + c
+  })
+  return sum
+}
+//Optimized
+const reduceAllNums = arr => arr.map(el=>Number(el)).reduce((acc,c)=>acc+c)
+
+console.log(reduceStringsAndNums([23,5,234,625,21]))
+console.log(reduceAllNums([23,5,234,625,21]))
+/*
+first i have to make them all number types
+i can map the array and return Number(element)
+finally i'll return the reduction of the mapped array
+*/
