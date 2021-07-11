@@ -108,3 +108,8 @@ first i have to make them all number types
 i can map the array and return Number(element)
 finally i'll return the reduction of the mapped array
 */
+
+
+
+
+
