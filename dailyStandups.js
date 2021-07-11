@@ -129,6 +129,7 @@ finally i'll return the reduction of the mapped array
 // if the indices are the same then its one of the two single occurring numbers
 // store them in a variable
 // sum the two vars
+
 // brute force
 
 function sumSingleNums(arr) {
