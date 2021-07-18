@@ -213,3 +213,32 @@ function alternateCase(s) {
 
 
 
+// Write Number in Expanded Form - Part 2
+// This is version 2 of my 'Write Number in Exanded Form' Kata.
+
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+// expandedForm(1.24); // should return '1 + 2/10 + 4/100'
+// expandedForm(7.304); // should return '7 + 3/10 + 4/1000'
+// expandedForm(0.04); // should return '4/100'
+
+function expandedForm(num) {
+  // Your code here
+  num = num.toString()
+  let whole = num.split('.')[0]
+  let dec = num.split('.')[1]
+  let arr = []
+  if (whole > 0) {
+    for (let i = 0 ; i < whole.length ; i++) {
+      if (whole[i] > 0) {
+        arr.push(whole[i] + '0'.repeat(whole.slice(i+1).length))
+      }
+    }
+  }
+  for (let i = 0 ; i < dec.length ; i++) {
+    if (dec[i] > 0) {
+      arr.push(dec[i] + '/' + (10**(i+1)))
+    }
+  }
+  return arr.join(' + ')
+}
