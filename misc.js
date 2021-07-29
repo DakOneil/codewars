@@ -1070,3 +1070,6 @@ function lastSurvivor(letters, coords) {
   coords.forEach(n=> arr.splice(n,1))
   return arr.join('')
 }
+
+
+
