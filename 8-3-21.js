@@ -81,3 +81,23 @@ function boredom(staff){
     let sum = arr.map(el=>scores[el]).reduce((acc,c)=>acc+c,0)
     return sum >= 100 ? 'party time!!' : sum > 80 ? 'i can handle this' : 'kill me now'
   }
+
+
+
+
+
+
+// The Office III - Broken Photocopier
+
+// The bloody photocopier is broken... Just as you were sneaking around the office to print off your favourite binary code!
+
+// Instead of copying the original, it reverses it: '1' becomes '0' and vice versa.
+
+// Given a string of binary, return the version the photocopier gives you as a string.
+
+function broken(x){
+    return x.split('').map(el=> {
+      if (el==='1') return '0'
+      else if (el==='0') return '1'
+    }).join('')
+  }
