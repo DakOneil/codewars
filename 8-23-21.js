@@ -13,3 +13,23 @@ function discoverOriginalPrice(discountedPrice, salePercentage){
     // ...
     return +(discountedPrice / (1- salePercentage/100)).toFixed(2)
   }
+
+
+
+
+  //SevenAte9
+
+//   Write a function that removes every lone 9 that is inbetween 7s.
+
+// sevenAte9('79712312') => '7712312'
+// sevenAte9('79797') => '777'
+
+function sevenAte9(str){
+    return str.split('').map((el,i,a)=> {
+      if (el==9 && a[i-1] == 7 && a[i+1] == 7) {
+        return ''
+      } else {
+        return el
+      }
+    }).join('')
+  }
