@@ -64,3 +64,21 @@ const head = (arr) => arr[0]
 const tail = (arr) => arr.slice(1,arr.length)
 const init = (arr) => arr.slice(0, arr.length-1)
 const last = (arr) => arr[arr.length-1]
+
+
+
+
+
+// Given a non-negative integer, return an array / a list of the individual digits in order.
+
+// Examples:
+
+// 123 => [1,2,3]
+
+// 1 => [1]
+
+// 8675309 => [8,6,7,5,3,0,9]
+
+function digitize(n) {
+    return ("" + n).split('').map(x=>+x)
+  }
